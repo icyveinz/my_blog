@@ -5,20 +5,20 @@ ENV PIP_NO_CACHE_DIR=off \
     PIP_DISABLE_PIP_VERSION_CHECK=on \
     POETRY_VIRTUALENVS_CREATE=false
 
-WORKDIR /django_web
+WORKDIR /my_blog_django
 
 RUN apt-get update && apt-get install -y \
     postgresql-client \
     && rm -rf /var/lib/apt/lists/*
 
-COPY . /django_web
+COPY . /my_blog_django
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-ENV PYTHONPATH=/django_web
+ENV PYTHONPATH=/my_blog_django
 
-COPY entrypoint.sh /django_web/entrypoint.sh
+COPY entrypoint.sh /my_blog_django/entrypoint.sh
 
-RUN chmod +x /django_web/entrypoint.sh
+RUN chmod +x /my_blog_django/entrypoint.sh
 
-ENTRYPOINT ["/django_web/entrypoint.sh"]
+ENTRYPOINT ["/my_blog_django/entrypoint.sh"]
