@@ -15,6 +15,14 @@ python manage.py migrate
 # Collect static files (optional if needed)
 python manage.py collectstatic --noinput
 
+# Navigate to the frontend directory and run the Gulp task
+echo "Running Gulp to compile assets..."
+cd frontend
+gulp styles  # Adjust the Gulp task name if it's different
+
+# Return to the original directory
+cd ..
+
 echo "Starting the Django application..."
 
 # Start the application
