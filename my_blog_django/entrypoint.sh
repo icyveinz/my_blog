@@ -18,4 +18,4 @@ python manage.py collectstatic --noinput
 echo "Starting the Django application..."
 
 # Start the application
-exec gunicorn --bind 0.0.0.0:8001 django_web.wsgi:application
+exec gunicorn --bind 0.0.0.0:8001 my_blog_django.wsgi:application
