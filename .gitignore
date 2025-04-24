@@ -3,3 +3,4 @@ __pycache__/
 postgres_data/
 /static
 /my_blog_django/frontend/node_modules
+/my_blog_django/frontend/package-lock.json
