@@ -8,11 +8,11 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./static:/django_web/static
-      - ./media:/django_web/media
+      - ./static:/my_blog_django/static
+      - ./media:/my_blog_django/media
     depends_on:
       - db
-      - django_web
+      - my_blog_django
     networks:
       - combined-network
 
@@ -28,12 +28,12 @@ services:
     networks:
       - combined-network
 
-  django_web:
-    build: ./django_web
-    container_name: django_web
+  my_blog_django:
+    build: ./my_blog_django
+    container_name: my_blog_django
     volumes:
-      - ./static:/django_web/static
-      - ./media:/django_web/media
+      - ./static:/my_blog_django/static
+      - ./media:/my_blog_django/media
     depends_on:
       - db
     networks:
