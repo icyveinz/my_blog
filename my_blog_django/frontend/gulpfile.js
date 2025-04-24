@@ -9,7 +9,7 @@ gulp.task('styles', function () {
         .pipe(sass().on('error', sass.logError))
         .pipe(cleanCSS())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('static/css'));
+        .pipe(gulp.dest('../static/css'));
 });
 
 gulp.task('default', gulp.parallel('styles'));

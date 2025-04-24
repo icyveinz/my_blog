@@ -18,6 +18,7 @@ python manage.py collectstatic --noinput
 # Navigate to the frontend directory and run the Gulp task
 echo "Running Gulp to compile assets..."
 cd frontend
+npx webpack
 gulp styles  # Adjust the Gulp task name if it's different
 
 # Return to the original directory
