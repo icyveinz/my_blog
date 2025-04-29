@@ -1,0 +1,32 @@
+.offer-grid-splitter
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-template-rows: repeat(2, 1fr)
+  width: 90%
+
+.flex-vertical
+  grid-column: 1 / 2
+  grid-row: 1 / 3
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: center
+
+.offer-header
+  font-size: 4vw
+
+.offer-comment
+  font-size: 2.8vw
+
+.offer-button
+  width: 30%
+  background-color: black
+  color: white
+  border: none
+  border-radius: 5px
+  font-size: 1.5vw
+  cursor: pointer
+  transition: background-color 0.3s ease
+  padding: 3%
+  :hover
+    background-color: #333
