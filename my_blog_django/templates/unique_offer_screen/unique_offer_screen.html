@@ -1,5 +1,5 @@
 <section class="max-width flex-row-centered">
-    <div class="offer-grid-splitter">
+    <section class="offer-grid-splitter">
         <div class="flex-vertical">
             <h2 class="margin-bottom-zero offer-header">
                 {{ offer.title }}
@@ -11,5 +11,16 @@
                 Contact us
             </button>
         </div>
+    </section>
+</section>
+<section class="max-width flex-row-centered">
+    <div class="our-pros-section">
+        {% for pro in pros %}
+            <div class="pros-block">
+                <h3>{{ pro.title }}</h3>
+                <p>{{ pro.comment }}</p>
+                <span>Explore</span>
+            </div>
+        {% endfor %}
     </div>
 </section>
