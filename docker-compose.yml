@@ -34,6 +34,10 @@ services:
     volumes:
       - ./static:/my_blog_django/static
       - ./media:/my_blog_django/media
+    environment:
+      DJANGO_SUPERUSER_USERNAME: admin
+      DJANGO_SUPERUSER_EMAIL: admin@example.com
+      DJANGO_SUPERUSER_PASSWORD: strongpassword
     depends_on:
       - db
     networks:
