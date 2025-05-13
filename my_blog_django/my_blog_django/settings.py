@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main_page',
-    'unique_offer_screen'
+    'unique_offer_screen',
+    'blog'
 ]
 
 MIDDLEWARE = [
