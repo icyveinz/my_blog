@@ -11,42 +11,50 @@
     </div>
     <section class="width-90 flex-row-centered">
         <div class="blog-sections-separator">
+            {% if top_three_articles|length >= 1 %}
             <div class="card-wrapper-1">
                 <div class="card">
-                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww" alt="Travel Image" class="card-bg" />
-                <div class="card-date">Sep 06, 2022</div>
-                <div class="card-tag">Travel</div>
-                <div class="card-content">
-                    <div class="card-tag-small">• Travel</div>
-                    <h2 class="card-title">Get to your dream now<br>destinations with Travel Pro</h2>
+                    <img src="{{ top_three_articles.0.photo.url }}" alt="{{ top_three_articles.0.title }}" class="card-bg" />
+                    <div class="card-date">{{ top_three_articles.0.date_added|date:"M d, Y" }}</div>
+                    <div class="card-tag">{{ top_three_articles.0.group.name }}</div>
+                    <div class="card-content">
+                        <div class="card-tag-small">• {{ top_three_articles.0.group.name }}</div>
+                        <h2 class="card-title">{{ top_three_articles.0.title|linebreaksbr }}</h2>
+                    </div>
+                    <a href="#" class="card-arrow">↗</a>
                 </div>
-                <a href="#" class="card-arrow">↗</a>
             </div>
-            </div>
+            {% endif %}
+
+            {% if top_three_articles|length >= 2 %}
             <div class="card-wrapper-2">
                 <div class="card">
-                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww" alt="Travel Image" class="card-bg" />
-                <div class="card-date">Sep 06, 2022</div>
-                <div class="card-tag">Travel</div>
-                <div class="card-content">
-                    <div class="card-tag-small">• Travel</div>
-                    <h2 class="card-title">Get to your dream now<br>destinations with Travel Pro</h2>
+                    <img src="{{ top_three_articles.1.photo.url }}" alt="{{ top_three_articles.1.title }}" class="card-bg" />
+                    <div class="card-date">{{ top_three_articles.1.date_added|date:"M d, Y" }}</div>
+                    <div class="card-tag">{{ top_three_articles.1.group.name }}</div>
+                    <div class="card-content">
+                        <div class="card-tag-small">• {{ top_three_articles.1.group.name }}</div>
+                        <h2 class="card-title">{{ top_three_articles.1.title|linebreaksbr }}</h2>
+                    </div>
+                    <a href="#" class="card-arrow">↗</a>
                 </div>
-                <a href="#" class="card-arrow">↗</a>
             </div>
-            </div>
+            {% endif %}
+
+            {% if top_three_articles|length >= 3 %}
             <div class="card-wrapper-3">
                 <div class="card">
-                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww" alt="Travel Image" class="card-bg" />
-                <div class="card-date">Sep 06, 2022</div>
-                <div class="card-tag">Travel</div>
-                <div class="card-content">
-                    <div class="card-tag-small">• Travel</div>
-                    <h2 class="card-title">Get to your dream now<br>destinations with Travel Pro</h2>
+                    <img src="{{ top_three_articles.2.photo.url }}" alt="{{ top_three_articles.2.title }}" class="card-bg" />
+                    <div class="card-date">{{ top_three_articles.2.date_added|date:"M d, Y" }}</div>
+                    <div class="card-tag">{{ top_three_articles.2.group.name }}</div>
+                    <div class="card-content">
+                        <div class="card-tag-small">• {{ top_three_articles.2.group.name }}</div>
+                        <h2 class="card-title">{{ top_three_articles.2.title|linebreaksbr }}</h2>
+                    </div>
+                    <a href="#" class="card-arrow">↗</a>
                 </div>
-                <a href="#" class="card-arrow">↗</a>
             </div>
-            </div>
+            {% endif %}
         </div>
     </section>
 </section>

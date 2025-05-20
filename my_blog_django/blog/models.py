@@ -11,6 +11,7 @@ class Article(models.Model):
     content = models.TextField()
     date_added = models.DateField(auto_now_add=True)
     group = models.ForeignKey(Group, on_delete=models.CASCADE, related_name='articles')
+    photo = models.ImageField(upload_to='article_photos/', null=True, blank=True)
 
     def __str__(self):
         return self.title
