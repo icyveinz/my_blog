@@ -1,5 +1,5 @@
 from django.contrib import admin
-from unique_offer_screen.models import UniqueOffer, OurProsBlock
+from main_page.unique_offer_screen.models import UniqueOffer, OurProsBlock
 
 # Register your models here.
 

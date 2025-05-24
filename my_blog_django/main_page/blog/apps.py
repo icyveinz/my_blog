@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class UniqueOfferScreenConfig(AppConfig):
+class BlogConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'unique_offer_screen'
+    name = 'main_page.blog'
