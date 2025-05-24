@@ -7,10 +7,7 @@
         </div>
         <div class="stack_section_grid">
             {% for card in stack_cards %}
-                <div class="stack_item" style="background-color: {{ card.background_color }};">
-                    <img src="{{ card.image.url }}" alt="{{ card.title }}">
-                    <div class="stack_item_title">{{ card.title }}</div>
-                </div>
+                {% include "main_page/stack_section/stack_card_template.html" with card=card%}
             {% endfor %}
         </div>
     </div>
