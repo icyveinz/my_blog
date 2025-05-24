@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Main Page</title>
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block assets %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
-</head>
-<body>
+{% endblock %}
+
+{% block body %}
     {%  include "main_page/menu/menu.html" %}
     {%  include "main_page/unique_offer_screen/unique_offer_screen.html" %}
     {%  include "main_page/blog_main_page/blog_main_page.html" %}
-</body>
-</html>
+    {%  include "main_page/stack_section/stack_section.html" %}
+{% endblock %}
