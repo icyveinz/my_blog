@@ -12,48 +12,21 @@
     <section class="width-90 flex-row-centered">
         <div class="blog-sections-separator">
             {% if top_three_articles|length >= 1 %}
-            <div class="card-wrapper-1">
-                <div class="card">
-                    <img src="{{ top_three_articles.0.photo.url }}" alt="{{ top_three_articles.0.title }}" class="card-bg" />
-                    <div class="card-date">{{ top_three_articles.0.date_added|date:"M d, Y" }}</div>
-                    <div class="card-tag">{{ top_three_articles.0.group.name }}</div>
-                    <div class="card-content">
-                        <div class="card-tag-small">• {{ top_three_articles.0.group.name }}</div>
-                        <h2 class="card-title">{{ top_three_articles.0.title|linebreaksbr }}</h2>
-                    </div>
-                    <a href="#" class="card-arrow">↗</a>
+                <div class="card-wrapper-1">
+                    {% include "main_page/blog_main_page/blog_card_template.html" with article=top_three_articles.0 %}
                 </div>
-            </div>
             {% endif %}
 
             {% if top_three_articles|length >= 2 %}
-            <div class="card-wrapper-2">
-                <div class="card">
-                    <img src="{{ top_three_articles.1.photo.url }}" alt="{{ top_three_articles.1.title }}" class="card-bg" />
-                    <div class="card-date">{{ top_three_articles.1.date_added|date:"M d, Y" }}</div>
-                    <div class="card-tag">{{ top_three_articles.1.group.name }}</div>
-                    <div class="card-content">
-                        <div class="card-tag-small">• {{ top_three_articles.1.group.name }}</div>
-                        <h2 class="card-title">{{ top_three_articles.1.title|linebreaksbr }}</h2>
-                    </div>
-                    <a href="#" class="card-arrow">↗</a>
+                <div class="card-wrapper-2">
+                    {% include "main_page/blog_main_page/blog_card_template.html" with article=top_three_articles.1 %}
                 </div>
-            </div>
             {% endif %}
 
             {% if top_three_articles|length >= 3 %}
-            <div class="card-wrapper-3">
-                <div class="card">
-                    <img src="{{ top_three_articles.2.photo.url }}" alt="{{ top_three_articles.2.title }}" class="card-bg" />
-                    <div class="card-date">{{ top_three_articles.2.date_added|date:"M d, Y" }}</div>
-                    <div class="card-tag">{{ top_three_articles.2.group.name }}</div>
-                    <div class="card-content">
-                        <div class="card-tag-small">• {{ top_three_articles.2.group.name }}</div>
-                        <h2 class="card-title">{{ top_three_articles.2.title|linebreaksbr }}</h2>
-                    </div>
-                    <a href="#" class="card-arrow">↗</a>
+                <div class="card-wrapper-3">
+                    {% include "main_page/blog_main_page/blog_card_template.html" with article=top_three_articles.2 %}
                 </div>
-            </div>
             {% endif %}
         </div>
     </section>

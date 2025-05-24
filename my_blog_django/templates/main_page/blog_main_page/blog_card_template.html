@@ -1,0 +1,10 @@
+<article class="card">
+    <img src="{{ article.photo.url }}" alt="{{ article.title }}" class="card-bg" />
+    <div class="card-date">{{ article.date_added|date:"M d, Y" }}</div>
+    <div class="card-tag">{{ article.group.name }}</div>
+    <div class="card-content">
+        <div class="card-tag-small">• {{ article.group.name }}</div>
+        <h2 class="card-title">{{ article.title|linebreaksbr }}</h2>
+    </div>
+    <a href="#" class="card-arrow">↗</a>
+</article>
