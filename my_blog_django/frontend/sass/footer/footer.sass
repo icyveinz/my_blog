@@ -1,10 +1,11 @@
+$phone_font: 5vw
+$small_font_footer: 1.2vw
+
 .footer-background-color
   background: #1a1a1a
 
 .card-footer
-  margin: 0 auto
   padding: 2rem
-  border-radius: 12px
 
 .content-footer
   display: flex
@@ -23,7 +24,7 @@
 
     .phone
       display: block
-      font-size: 3rem
+      font-size: $phone_font
       font-weight: 900
       color: white
       text-decoration: none
@@ -31,14 +32,14 @@
       line-height: 1.2
 
     .person
-      font-size: 0.8rem
+      font-size: $small_font_footer
       color: #aaa
 
 .nav-footer
   display: flex
   justify-content: space-between
   margin-top: 2rem
-  font-size: 0.8rem
+  font-size: $small_font_footer
 
   a
     display: block
